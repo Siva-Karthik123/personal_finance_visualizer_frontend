@@ -31,19 +31,19 @@ function App() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/transactions')
+    fetch('https://personal-finance-visualizer.onrender.com/api/transactions')
       .then(response => response.json())
       .then(data => setTransactions(data))
       .catch(err => setError('Failed to fetch transactions'));
 
-    fetch('http://localhost:5000/api/budgets')
+    fetch('https://personal-finance-visualizer.onrender.com/api/budgets')
       .then(response => response.json())
       .then(data => setBudgets(data))
       .catch(err => setError('Failed to fetch budgets'));
   }, []);
 
   const addTransaction = (transaction) => {
-    fetch('http://localhost:5000/api/transactions', {
+    fetch('https://personal-finance-visualizer.onrender.com/api/transactions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ function App() {
   };
 
   const deleteTransaction = (id) => {
-    fetch(`http://localhost:5000/api/transactions/${id}`, {
+    fetch(`https://personal-finance-visualizer.onrender.com/api/transactions/${id}`, {
       method: 'DELETE',
     })
       .then(() => setTransactions(transactions.filter(transaction => transaction._id !== id)))
@@ -64,7 +64,7 @@ function App() {
   };
 
   const addBudget = (budget) => {
-    fetch('http://localhost:5000/api/budgets', {
+    fetch('https://personal-finance-visualizer.onrender.com/api/budgets', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
