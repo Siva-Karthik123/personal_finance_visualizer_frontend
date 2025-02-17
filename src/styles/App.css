@@ -1,0 +1,71 @@
+/* filepath: /d:/internship/personal-finance-visualizer/frontend/src/styles/App.css */
+.App {
+  text-align: center;
+  padding: 20px;
+  background-color: #121212; /* Black background */
+  color: #ffffff; /* White text */
+}
+
+h1, h4 {
+  color: #ff9800; /* Orange color */
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+.MuiAppBar-root {
+  background-color: #000000; /* Black background for AppBar */
+}
+
+.MuiButton-root {
+  color: #ff9800; /* Orange text */
+}
+
+.MuiPaper-root {
+  background-color: #1e1e1e; /* Dark grey background for cards */
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #ffffff; /* White text */
+}
+
+@media (max-width: 600px) {
+  .App {
+    padding: 10px;
+  }
+
+  form div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  form div label {
+    margin-bottom: 5px;
+  }
+
+  form div input {
+    width: 100%;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    margin: 5px 0;
+  }
+}
